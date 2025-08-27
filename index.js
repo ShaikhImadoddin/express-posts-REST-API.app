@@ -38,7 +38,7 @@ app.get("/", (req,res) => {
 });
 
 app.get("/posts", (req,res) => {
-    res.render("index.ejs",{posts});
+    res.render("index.ejs",{posts,port});
 });
 
 app.get("/posts/new", (req,res) => {
