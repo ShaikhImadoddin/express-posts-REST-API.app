@@ -3,6 +3,8 @@
 A mini Quora-style CRUD application built with **Node.js, Express, EJS, and Tailwind CSS**.  
 This app allows users to create, view, edit, and delete posts in a simple and modern interface.
 
+🔹 Purpose: The main goal behind building this mini-project was to learn and practice REST API structure for CRUD operations using Express and understand how to integrate it with EJS templates for a full-stack workflow.
+
 ---
 
 ## 🚀 Features
@@ -10,6 +12,7 @@ This app allows users to create, view, edit, and delete posts in a simple and mo
 - View all posts in a clean card layout
 - Edit existing posts
 - Delete posts
+- RESTful API structure for CRUD operations
 - Styled using **Tailwind CSS** for a responsive, modern look
 
 ---
@@ -19,13 +22,14 @@ This app allows users to create, view, edit, and delete posts in a simple and mo
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/ShaikhImadoddin/express-posts-TEST-API.app.git
+git clone https://github.com/ShaikhImadoddin/express-posts-REST-API.app.git
 cd express-posts-app
 Install dependencies:
 
 bash
 Copy code
 npm install
+
 ▶️ Usage
 Start the server:
 
