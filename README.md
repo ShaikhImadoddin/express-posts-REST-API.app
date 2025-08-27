@@ -35,8 +35,8 @@ Start the server:
 ```bash
 node index.js
 ```
-Open your browser and go to:
-http://localhost:8080/posts
+Live Link:
+https://express-posts-rest-app.onrender.com
 
 🛠️ Tech Stack
 Backend: Node.js, Express
