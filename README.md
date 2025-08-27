@@ -48,5 +48,6 @@ Styling: Tailwind CSS + Custom CSS
 Utilities: UUID for unique post IDs, Method Override for PATCH & DELETE
 
 ## 📜 License
-This project is licensed under the **MIT License**.
+This project is licensed under the [MIT License](./LICENSE).
+
 
