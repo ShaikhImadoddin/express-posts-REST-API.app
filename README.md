@@ -22,6 +22,7 @@ This app allows users to create, view, edit, and delete posts in a simple and mo
 1. Clone the repository:
 
 git clone https://github.com/ShaikhImadoddin/express-posts-REST-API.app.git
+
 cd express-posts-app
 
 Install dependencies:
