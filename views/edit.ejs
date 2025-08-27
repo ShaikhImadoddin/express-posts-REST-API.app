@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Post</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+    <div class="bg-white rounded-xl shadow-lg p-8 w-full max-w-md">
+        <h2 class="text-xl font-bold text-red-600 text-center mb-6">Edit Your Post</h2>
+        <p class="text-sm text-gray-500 mb-2">post id: <%= post.id %></p>
+        <p class="text-sm text-gray-500 mb-2">username: <%= post.username %></p>
+
+         <!-- Edit Form -->
+        <form method="POST" action="/posts/<%=post.id%>?_method=PATCH" class="space-y-5">
+            <!-- Content -->
+            <div>
+                <label for="content" class="block text-sm font-medium text-gray-700">Content</label>
+                <textarea id="content" name="content" rows="4"
+                class="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-2 text-gray-700 
+                      focus:border-red-500 focus:ring-2 focus:ring-red-300 focus:outline-none transition"
+                required><%= post.content %></textarea>
+            </div>
+             
+
+            <!-- Buttons -->
+            <div class="flex justify-center gap-4">
+                <button type="submit"
+                class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-lg shadow-md font-medium">
+                Update Post
+                </button>
+
+                <a href="/posts/<%= post.id %>" 
+                class="bg-gray-300 hover:bg-gray-400 text-gray-800 px-6 py-2 rounded-lg shadow-md font-medium">
+                Cancel
+                </a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Posts</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <!-- Navbar -->
+     <nav class="bg-white shadow-md p-4 mb-6">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-red-700">Mini Quora</h1>
+            <a href="/posts/new" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md shadow">Ask Question</a>
+        </div>
+     </nav>
+
+     <!-- Main Content -->
+    <div class="text-center">
+        <h1 class="text-2xl font-bold text-red-700 bg-white px-4 py-2 rounded-md shadow inline-block" >Posts</h1>
+    </div>
+    
+    <div class="max-w-3xl mx-auto p-4">
+        <% for (post of posts) { %>
+            <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                <h3 class="user text-gray-600 font-medium">@<%= post.username %> </h3>
+                <h4 class="content text-lg font-semibold text-gray-900 mb-3"><%= post.content %></h4>
+
+                <div class="flex space-x-4">
+                    <a href="http://localhost:8080/posts/<%=post.id%>" class="text-blue-600 hover:underline">See in Detail</a>
+                    <a href="http://localhost:8080/posts/<%=post.id%>/edit" class="text-blue-600 hover:underline">Edit Post</a>
+                    <form method="POST" action="/posts/<%=post.id%>?_method=DELETE" >
+                        <button class="text-red-600 hover:underline">Delete</button>
+                    </form>
+                </div>
+            </div>
+        <% } %>
+         <!-- Extra Create Post Link at Bottom -->
+        <div class="text-center mt-10">
+            <a href="/posts/new" class="font-medium bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md shadow">
+                Create a New Post
+            </a>
+        </div>
+    </div>
+</body>
+</html>
