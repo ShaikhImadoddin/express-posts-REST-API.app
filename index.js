@@ -33,7 +33,8 @@ let posts = [
 
 
 app.get("/", (req,res) => {
-    res.send("Server working well");
+    console.log("Server working well");
+    res.redirect("/posts");
 });
 
 app.get("/posts", (req,res) => {
