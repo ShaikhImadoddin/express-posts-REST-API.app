@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 8080;
+const port = process.env.PORT || 8080;
 const path = require("path");
 const { v4: uuidv4 } = require('uuid');
 var methodOverride = require('method-override')
@@ -79,5 +79,5 @@ app.delete("/posts/:id", (req,res) => {
 })
 
 app.listen(port, () => {
-    console.log("Listening to port: 8080");
+    console.log(`Server running on http://localhost:${port}`);
 });
