@@ -23,21 +23,15 @@ This app allows users to create, view, edit, and delete posts in a simple and mo
 
 git clone https://github.com/ShaikhImadoddin/express-posts-REST-API.app.git
 cd express-posts-app
-Install dependencies:
 
-Copy code
+Install dependencies:
 npm install
 
 ▶️ Usage
 Start the server:
-
-bash
-Copy code
 node index.js
-Open your browser and go to:
 
-bash
-Copy code
+Open your browser and go to:
 http://localhost:8080/posts
 
 🛠️ Tech Stack
