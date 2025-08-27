@@ -53,6 +53,7 @@ app.post("/posts", (req,res)=> {
 
 app.get("/posts/:id", (req,res) => {
     let { id } = req.params;
+    console.log(id);
     let post = posts.find((p) => String(id) === String(p.id));
     console.log(post);
     res.render("show.ejs",{post});
